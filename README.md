@@ -6,4 +6,4 @@ Neo is an AI-powered coaching assistant that helps you achieve your personal and
 
 Neo uses advanced artificial intelligence to provide:
 - Personalized coaching conversations
-- Actionable insights and recommendations
+- Actionable insights and recommendations# Deployment test - Sun Aug 10 03:54:07 EDT 2025
