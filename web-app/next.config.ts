@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   experimental: {
     serverActions: {
-      allowedOrigins: ['localhost:3000', 'https://https://supreme-doodle-wv57vg5593gj55-3000.app.github.dev/']
+      allowedOrigins: ['localhost:3000', 'meetneo.app', 'www.meetneo.app', '*.vercel.app']
     }
   },
   images: {
@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'lljydrvrqipjgpmpdqqf.supabase.co',
+        hostname: 'nfhlcsciwdmglhlfloms.supabase.co',
       }
     ],
   },
