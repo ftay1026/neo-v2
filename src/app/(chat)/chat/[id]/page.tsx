@@ -81,7 +81,7 @@ export default async function Page(props: {
       id: message.id,
       parts: message.parts as UIMessage['parts'],
       role: message.role as UIMessage['role'],
-      content: (message.parts as UIMessage['parts'])?.filter(part => part.type === 'text').map(part => (part as { text: string, type: 'text' }).text).join('') || '',
+      content: (message.parts as UIMessage['parts'])?.filter((part:any) => part.type === 'text').map((part:any) => (part as { text: string, type: 'text' }).text).join('') || '',
       createdAt: new Date(message.created_at),
       experimental_attachments: [],
     }));
