@@ -15,7 +15,7 @@ export default async function Home() {
   const user = await getUser(supabase);
   
   if (user) {
-    redirect("/app");
+    redirect("/projects");
   }
   return (
     <main className="min-h-dvh flex flex-col bg-background">
