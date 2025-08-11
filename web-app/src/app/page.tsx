@@ -5,8 +5,18 @@ import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { HitPayPricingTiers } from "@/components/checkout/hitpay-pricing-constants";
+import { createClient } from "@/utils/supabase/server";
+import { getUser } from "@/utils/supabase/queries";
+import { redirect } from "next/navigation";
 
-export default function Home() {
+export default async function Home() {
+  // Check if user is authenticated and redirect to main app
+  const supabase = await createClient();
+  const user = await getUser(supabase);
+  
+  if (user) {
+    redirect("/app");
+  }
   return (
     <main className="min-h-dvh flex flex-col bg-background">
       <nav className="w-full max-w-7xl mx-auto h-16 flex justify-between items-center px-4 sm:px-6 lg:px-8">
