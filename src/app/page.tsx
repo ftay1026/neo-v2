@@ -10,7 +10,7 @@ import { getUser } from "@/utils/supabase/queries";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
-  // Check if user is authenticated and redirect to main app
+  // Check if user is authenticated and redirect to projects page
   const supabase = await createClient();
   const user = await getUser(supabase);
   
