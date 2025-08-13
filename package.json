@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "pnpm check-versions && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check-versions": "echo '=== Checking Package Versions with pnpm ===' && pnpm list --depth=0 && echo '=== Supabase Versions ===' && pnpm list | grep supabase && echo '=== Next.js Version ===' && pnpm list next"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^1.2.2",
