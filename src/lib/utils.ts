@@ -24,10 +24,12 @@ export const getURL = (path: string = '') => {
             : // If neither is set, default to localhost for local development.
               'http://localhost:3000/';
 
-  // Trim the URL and remove trailing slash if exists.
-  url = url.replace(/\/+$/, '');
+  // Trim the URL and remove trailing slash AND any newlines
+  url = url.trim().replace(/[\r\n]+/g, '').replace(/\/+$/, '');
+  
   // Make sure to include `https://` when not localhost.
   url = url.includes('http') ? url : `https://${url}`;
+  
   // Ensure path starts without a slash to avoid double slashes in the final URL.
   path = path.replace(/^\/+/, '');
 
